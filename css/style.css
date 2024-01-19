@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 html{
@@ -42,7 +43,7 @@ a{
 /*-------------------Header--------------------*/
 
 .header{
-  background-color: #fffcf4;
+  background-color: #c6f581;
 }
 
 .header.fixed{
@@ -217,13 +218,14 @@ a{
 }
 
 .content-block .text-fist{
-  width: 470px;
+   width: 470px;
   color: #171100;
   font-family: var(--font-fl2);
   font-size: 58px;
   font-weight: 700;
   line-height: 117.3%;
   letter-spacing: -1.16px;
+   white-space: nowrap;
 }
 
 .content-block .text-content{
@@ -234,6 +236,27 @@ a{
   font-weight: 400;
   line-height: 166.7%;
   margin-top: 22px;
+}
+
+.content-block .text-fist{
+  overflow: hidden;
+  border-right: 3px solid;
+  animation: typing 3s steps(22) forwards,blick 0.9s step-end infinite;
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }
+  to{
+    width: 104%;
+  }
+}
+
+@keyframes blick{
+  50%{
+    border-color: transparent;
+  }
 }
 
 
@@ -317,4 +340,22 @@ margin-right: 14px;
 
 .content-block .end-text p:nth-child(2){
     margin-left: 28px;
+}
+
+.content-block .text-content.text-second{
+  width: 470px;
+  color: #ef350b;
+  font-family: var(--font-fl2);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 117.3%;
+  letter-spacing: -1.16px;
+   white-space: nowrap;
+   margin-top: 0px;
+   margin-bottom: 10px;
+}
+
+.main2{
+
+
 }
